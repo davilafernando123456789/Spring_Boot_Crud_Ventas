@@ -32,7 +32,7 @@ public class DetalleVentaController {
     public String listDetalleVentas(Model model) {
         List<DetalleVenta> detalleVentas = detalleVentaService.findAll();
         model.addAttribute("detalleVentas", detalleVentas);
-        return "detalleVentas/detalleVentas";
+        return "detalleventas/detalleVentas";
     }
 
     @GetMapping("/nuevo")
@@ -43,7 +43,7 @@ public class DetalleVentaController {
         model.addAttribute("detalleVenta", detalleVenta);
         model.addAttribute("productos", productos);
         model.addAttribute("ventas", ventas);
-        return "detalleVentas/crearDetalleVenta";
+        return "detalleventas/crearDetalleVenta";
     }
 
     @PostMapping("/guardar")
@@ -60,7 +60,7 @@ public class DetalleVentaController {
         model.addAttribute("detalleVenta", detalleVenta);
         model.addAttribute("productos", productos);
         model.addAttribute("ventas", ventas);
-        return "detalleVentas/editarDetalleVenta";
+        return "detalleventas/editarDetalleVenta";
     }
 
     @PostMapping("/actualizar/{id}")
